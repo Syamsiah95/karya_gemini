@@ -14,15 +14,37 @@
     <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-10 px-6 shadow-md text-center">
         <div class="max-w-4xl mx-auto">
             <span class="bg-blue-500/30 text-blue-100 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-blue-400/30">Lab Maya & Media Interaktif</span>
-            <h1 class="text-3xl md:text-5xl font-extrabold mt-3 mb-2 tracking-tight">Media Pembelajaran</h1>
+            <h1 class="text-3xl md:text-5xl font-extrabold mt-3 mb-2 tracking-tight">Karya Media Pembelajaran</h1>
             <p class="text-blue-100 text-sm md:text-base max-w-xl mx-auto font-light">
                 Kumpulan simulasi lab maya dan aplikasi pembelajaran interaktif untuk membantu siswa belajar dengan lebih seru dan mudah dipahami.
             </p>
         </div>
     </header>
 
-    <!-- Main Content / Daftar Aplikasi -->
-    <main class="max-w-5xl mx-auto px-6 py-12 flex-grow w-full">
+    <!-- Main Content -->
+    <main class="max-w-5xl mx-auto px-6 py-10 flex-grow w-full">
+
+        <!-- KARTU PROFIL PENGEMBANG -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 mb-10 flex flex-col sm:flex-row items-center gap-6">
+            <!-- Foto Profil Otomatis dari Akun GitHub Syamsiah95 -->
+            <img src="https://github.com/Syamsiah95.png" alt="Foto Pengembang" class="w-24 h-24 rounded-full object-cover border-4 border-blue-500/20 shadow-md flex-shrink-0">
+            
+            <div class="text-center sm:text-left flex-grow">
+                <div class="flex flex-col sm:flex-row sm:items-center gap-2 mb-1">
+                    <h3 class="text-xl font-bold text-slate-800">Syamsiah, S.Pd.</h3>
+                    <span class="bg-blue-100 text-blue-700 text-xs font-semibold px-2.5 py-0.5 rounded-full w-fit mx-auto sm:mx-0">Guru Informatika / Pengembang Media</span>
+                </div>
+                <p class="text-slate-600 text-sm leading-relaxed mb-3">
+                    Media pembelajaran interaktif ini dirancang untuk memudahkan siswa memahami konsep Jaringan Komputer, Algoritma, dan Pemrograman secara visual dan praktis.
+                </p>
+                <div class="flex items-center justify-center sm:justify-start gap-4 text-slate-500 text-sm">
+                    <a href="https://github.com/Syamsiah95" target="_blank" class="hover:text-blue-600 transition-colors flex items-center gap-1.5 font-medium">
+                        <i class="fa-brands fa-github"></i> Syamsiah95
+                    </a>
+                </div>
+            </div>
+        </div>
+
         <div class="flex items-center justify-between mb-8 border-b border-slate-200 pb-4">
             <h2 class="text-xl font-bold text-slate-700 flex items-center gap-2">
                 <i class="fa-solid fa-cubes text-blue-600"></i> Pilih Aplikasi Simulasi
@@ -30,7 +52,7 @@
             <span class="text-xs font-semibold bg-slate-200 text-slate-600 px-2.5 py-1 rounded-full">SMP / Kelas 8</span>
         </div>
 
-        <!-- Grid Kartu Aplikasi -->
+        <!-- Grid 3 Kartu Aplikasi -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
             <!-- KARTU 1: Simulasi Jaringan Komputer -->
@@ -39,65 +61,62 @@
                     <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-2xl font-bold mb-4 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-network-wired"></i>
                     </div>
-                    <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Informatika / Kelas 9</span>
+                    <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Informatika / TIK</span>
                     <h3 class="text-xl font-bold text-slate-800 mt-1 mb-2 group-hover:text-blue-600 transition-colors">Lab Maya Jaringan Komputer</h3>
                     <p class="text-slate-600 text-sm leading-relaxed mb-4">
-                        Simulasi interaktif merakit Jaringan Lokal (LAN) & Internet. Lengkap dengan fitur Drag & Drop, Tes Ping, Latihan, dan Ujian.
+                        Simulasi interaktif merakit Jaringan Lokal (LAN) & Internet. Lengkap dengan Drag & Drop, Tes Ping, Latihan, dan Ujian.
                     </p>
                 </div>
                 <div class="px-6 pb-6 pt-2 border-t border-slate-100 bg-slate-50/50 flex items-center justify-between">
                     <span class="text-xs font-medium text-emerald-600 bg-emerald-50 px-2 py-1 rounded border border-emerald-200">
                         <i class="fa-solid fa-circle-check"></i> Siap Digunakan
                     </span>
-                    <!-- ISI URL REPOSITORY SIMULASI JARINGAN ANDA DI BAWAH INI -->
                     <a href="https://syamsiah95.github.io/simulasi_jaringan/" target="_blank" class="inline-flex items-center gap-1.5 text-sm font-bold text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-colors">
                         Buka Lab <i class="fa-solid fa-arrow-right text-xs"></i>
                     </a>
                 </div>
             </div>
 
-            <!-- KARTU 2: Placeholder Aplikasi Selanjutnya (Contoh) -->
-            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between overflow-hidden opacity-75">
+            <!-- KARTU 2: Pseudocode Quest -->
+            <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 flex flex-col justify-between overflow-hidden group">
                 <div class="p-6">
-                    <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center text-2xl font-bold mb-4">
-                        <i class="fa-solid fa-flask"></i>
+                    <div class="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-2xl font-bold mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-compass"></i>
                     </div>
-                    <span class="text-xs font-semibold text-purple-600 uppercase tracking-wider">Informatika / Kelas 9</span>
-                    <h3 class="text-xl font-bold text-slate-800 mt-1 mb-2">Pseudocode Quest</h3>
+                    <span class="text-xs font-semibold text-indigo-600 uppercase tracking-wider">Algoritma & Pemrograman</span>
+                    <h3 class="text-xl font-bold text-slate-800 mt-1 mb-2 group-hover:text-indigo-600 transition-colors">Pseudocode Quest</h3>
                     <p class="text-slate-600 text-sm leading-relaxed mb-4">
-                        Menjelajah Pseudocode dalam hal memahami, menerapkan, merefleksi 
+                        Petualangan interaktif belajar dasar-dasar algoritma dan logika pemrograman dasar untuk siswa.
                     </p>
                 </div>
                 <div class="px-6 pb-6 pt-2 border-t border-slate-100 bg-slate-50/50 flex items-center justify-between">
-                    <span class="text-xs font-medium text-amber-600 bg-amber-50 px-2 py-1 rounded border border-amber-200">
-                        <i class="fa-solid fa-clock"></i> Siap Digunakan
+                    <span class="text-xs font-medium text-emerald-600 bg-emerald-50 px-2 py-1 rounded border border-emerald-200">
+                        <i class="fa-solid fa-circle-check"></i> Siap Digunakan
                     </span>
-                    <!-- ISI URL REPOSITORY PSEDOCODE QUEST ANDA DI BAWAH INI -->
-                    <a href="https://syamsiah95.github.io/Pseudocode_quest/" target="_blank" class="inline-flex items-center gap-1.5 text-sm font-bold text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-colors">
-                        Buka Lab <i class="fa-solid fa-arrow-right text-xs"></i>
+                    <a href="https://syamsiah95.github.io/Pseudocode_quest/" target="_blank" class="inline-flex items-center gap-1.5 text-sm font-bold text-white bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded-lg transition-colors">
+                        Mulai Quest <i class="fa-solid fa-arrow-right text-xs"></i>
                     </a>
                 </div>
             </div>
 
-            <!-- KARTU 3: Placeholder Aplikasi Kuis (Contoh) -->
-            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between overflow-hidden opacity-75">
+            <!-- KARTU 3: Game Menyusun Pseudocode -->
+            <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 flex flex-col justify-between overflow-hidden group">
                 <div class="p-6">
-                    <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl font-bold mb-4">
-                        <i class="fa-solid fa-gamepad"></i>
+                    <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl font-bold mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-puzzle-piece"></i>
                     </div>
-                    <span class="text-xs font-semibold text-emerald-600 uppercase tracking-wider">Kuis Interaktif</span>
-                    <h3 class="text-xl font-bold text-slate-800 mt-1 mb-2">Game Edukasi Informatika</h3>
+                    <span class="text-xs font-semibold text-emerald-600 uppercase tracking-wider">Algoritma & Pemrograman</span>
+                    <h3 class="text-xl font-bold text-slate-800 mt-1 mb-2 group-hover:text-emerald-600 transition-colors">Game Menyusun Pseudocode</h3>
                     <p class="text-slate-600 text-sm leading-relaxed mb-4">
-                        Kuis interaktif berbasis game untuk menguji pemahaman menyusun pseudocode.
+                        Game edukasi interaktif untuk melatih logika berpikir komputasional dan menyusun perintah pseudocode secara tepat.
                     </p>
                 </div>
                 <div class="px-6 pb-6 pt-2 border-t border-slate-100 bg-slate-50/50 flex items-center justify-between">
-                    <span class="text-xs font-medium text-amber-600 bg-amber-50 px-2 py-1 rounded border border-amber-200">
-                        <i class="fa-solid fa-clock"></i> Segera Hadir
+                    <span class="text-xs font-medium text-emerald-600 bg-emerald-50 px-2 py-1 rounded border border-emerald-200">
+                        <i class="fa-solid fa-circle-check"></i> Siap Digunakan
                     </span>
-                     <!-- ISI URL REPOSITORY GAME INTERAKTIF PSEUDOCODE ANDA DI BAWAH INI -->
-                    <a href="https://syamsiah95.github.io/Game-Menyusun-Pseudocode/" target="_blank" class="inline-flex items-center gap-1.5 text-sm font-bold text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-colors">
-                        Buka Lab <i class="fa-solid fa-arrow-right text-xs"></i>
+                    <a href="https://syamsiah95.github.io/Game-Menyusun-Pseudocode/" target="_blank" class="inline-flex items-center gap-1.5 text-sm font-bold text-white bg-emerald-600 hover:bg-emerald-700 px-4 py-2 rounded-lg transition-colors">
+                        Main Game <i class="fa-solid fa-arrow-right text-xs"></i>
                     </a>
                 </div>
             </div>
@@ -107,7 +126,7 @@
 
     <!-- Footer -->
     <footer class="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-500">
-        <p>© 2026 Media Pembelajaran Interaktif | Syamsiah, M.Pd | SMP Negeri 95 Jakarta | 2026</p>
+        <p>© 2026 Media Pembelajaran Interaktif. Dibuat untuk Kemudahan Belajar Siswa.</p>
     </footer>
 
 </body>
