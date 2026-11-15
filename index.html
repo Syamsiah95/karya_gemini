@@ -59,8 +59,9 @@
             <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 overflow-hidden group flex flex-col">
                 <img src="img/1.webp" alt="" class="w-full aspect-video object-cover">
                 <h3 class="p-4 pb-2 text-lg font-bold text-slate-800 group-hover:text-blue-600 transition-colors">Lab Maya Jaringan Komputer</h3>
-                <div class="px-4 pb-4 mt-auto">
-                    <a href="https://syamsiah95.github.io/simulasi_jaringan/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-bold text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-colors">
+                <div class="px-4 pb-4 mt-auto flex items-center justify-between gap-3">
+                    <span class="text-xs text-slate-500">Dibuka <span data-card-counter="jaringan" aria-live="polite">0</span> kali</span>
+                    <a href="https://syamsiah95.github.io/simulasi_jaringan/" target="_blank" rel="noopener noreferrer" data-card-id="jaringan" class="inline-flex items-center gap-1.5 text-sm font-bold text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-colors">
                         Buka Lab <i class="fa-solid fa-arrow-right text-xs"></i>
                     </a>
                 </div>
@@ -70,8 +71,9 @@
             <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 overflow-hidden group flex flex-col">
                 <img src="img/3.jpg" alt="" class="w-full aspect-video object-cover">
                 <h3 class="p-4 pb-2 text-lg font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">Pseudocode Quest</h3>
-                <div class="px-4 pb-4 mt-auto">
-                    <a href="https://syamsiah95.github.io/Pseudocode_quest/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-bold text-white bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded-lg transition-colors">
+                <div class="px-4 pb-4 mt-auto flex items-center justify-between gap-3">
+                    <span class="text-xs text-slate-500">Dibuka <span data-card-counter="quest" aria-live="polite">0</span> kali</span>
+                    <a href="https://syamsiah95.github.io/Pseudocode_quest/" target="_blank" rel="noopener noreferrer" data-card-id="quest" class="inline-flex items-center gap-1.5 text-sm font-bold text-white bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded-lg transition-colors">
                         Mulai Quest <i class="fa-solid fa-arrow-right text-xs"></i>
                     </a>
                 </div>
@@ -81,8 +83,9 @@
             <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 overflow-hidden group flex flex-col">
                 <img src="img/2.jpg" alt="" class="w-full aspect-video object-cover">
                 <h3 class="p-4 pb-2 text-lg font-bold text-slate-800 group-hover:text-emerald-600 transition-colors">Game Menyusun Pseudocode</h3>
-                <div class="px-4 pb-4 mt-auto">
-                    <a href="https://syamsiah95.github.io/Game-Menyusun-Pseudocode/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-bold text-white bg-emerald-600 hover:bg-emerald-700 px-4 py-2 rounded-lg transition-colors">
+                <div class="px-4 pb-4 mt-auto flex items-center justify-between gap-3">
+                    <span class="text-xs text-slate-500">Dibuka <span data-card-counter="game" aria-live="polite">0</span> kali</span>
+                    <a href="https://syamsiah95.github.io/Game-Menyusun-Pseudocode/" target="_blank" rel="noopener noreferrer" data-card-id="game" class="inline-flex items-center gap-1.5 text-sm font-bold text-white bg-emerald-600 hover:bg-emerald-700 px-4 py-2 rounded-lg transition-colors">
                         Main Game <i class="fa-solid fa-arrow-right text-xs"></i>
                     </a>
                 </div>
@@ -96,5 +99,35 @@
         <p>© 2026 Media Pembelajaran Interaktif. Dibuat untuk Kemudahan Belajar Siswa.</p>
     </footer>
 
+    <script>
+        const counterStorageKey = (cardId) => `karya-gemini-card-clicks-${cardId}`;
+
+        const readCounter = (cardId) => {
+            const storedCount = localStorage.getItem(counterStorageKey(cardId));
+            const count = storedCount === null ? 0 : Number(storedCount);
+            if (!Number.isSafeInteger(count) || count < 0) {
+                throw new Error(`Nilai counter untuk card "${cardId}" tidak valid.`);
+            }
+            return count;
+        };
+
+        document.querySelectorAll("[data-card-counter]").forEach((counter) => {
+            const cardId = counter.dataset.cardCounter;
+            counter.textContent = readCounter(cardId).toLocaleString("id-ID");
+        });
+
+        document.querySelectorAll("[data-card-id]").forEach((link) => {
+            link.addEventListener("click", () => {
+                const cardId = link.dataset.cardId;
+                const nextCount = readCounter(cardId) + 1;
+                if (!Number.isSafeInteger(nextCount)) {
+                    throw new Error(`Counter untuk card "${cardId}" mencapai batas nilai.`);
+                }
+                localStorage.setItem(counterStorageKey(cardId), String(nextCount));
+                document.querySelector(`[data-card-counter="${cardId}"]`).textContent =
+                    nextCount.toLocaleString("id-ID");
+            });
+        });
+    </script>
 </body>
 </html>
